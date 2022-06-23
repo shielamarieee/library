@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-color: #b89f87;
+    --content-color: #eeeadf;
+    --box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 2px 3px 0 rgba(0,0,0,.2);
+}
+
+/* Header */
+.header {
+    min-height: 15vh;
+    min-width: 100vw;
+    background-color: var(--header-color);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 1;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #362813;
+}
+
+.logo span {
+    font-size: 3rem;
+}
+
+.title {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 3rem;
+}
+
+.add-book-btn {
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 2px 10px;
+}
+
+.add-book-btn:hover {
+    cursor: pointer;
+    background-color: #e0dede;
+}
+
+
+
+/* Main Content */
+.main-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--content-color);
+}
