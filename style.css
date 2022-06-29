@@ -6,11 +6,12 @@
 }
 
 :root {
-    --header-color: #9c7f63;
+    --header-color: #49361c;
     --content-color: #eeeadf;
     --box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 2px 3px 0 rgba(0,0,0,.2);
     --card-color: #fffbf7;
     --title-color: #362813;
+    --button-color: #a58b63;
 }
 
 /* Header */
