@@ -58,6 +58,29 @@ function addBookToLibrary(book) {
     bookPages.className = 'book-pages';
     bookPages.textContent = `${book.pages} pages`;
 
+    //button-group
+    const buttonGroup = document.createElement('div');
+    buttonGroup.className = 'button-group';
+
+    const statusBtn = document.createElement('i');
+    statusBtn.addEventListener('click', () => {
+        if(statusBtn.className === 'fa-solid fa-book') {
+            statusBtn.className = 'fa-solid fa-book-open';
+            bookCard.classList.add('read');
+            console.log('read');
+        } else {
+            statusBtn.className = 'fa-solid fa-book';
+            console.log('not read');
+            bookCard.classList.remove('read');
+        }
+    });
+
+    const removeBtn = document.createElement('i');
+    removeBtn.className = 'fa-solid fa-trash-can'
+    removeBtn.addEventListener('click', () => {
+        bookGrid.removeChild(bookCard);
+        console.log('remove');
+    })
 
     if(book.status === true) {
         statusBtn.className = 'fa-solid fa-book-open';
@@ -70,5 +93,8 @@ function addBookToLibrary(book) {
     bookCard.appendChild(bookTitle);
     bookCard.appendChild(bookAuthor);
     bookCard.appendChild(bookPages);
+    bookCard.appendChild(buttonGroup);
+    buttonGroup.appendChild(statusBtn);
+    buttonGroup.appendChild(removeBtn);
     bookGrid.appendChild(bookCard);
 }
