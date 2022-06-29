@@ -311,3 +311,24 @@ input:checked + .slider:before {
 .modal-close-btn:hover {
     opacity: 1;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .add-book-btn {
+        border: none;
+        font-size: 2rem;
+        border-radius: 50%;
+        padding: 0 10px;
+    }
+
+    .book-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
