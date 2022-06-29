@@ -105,6 +105,28 @@
     border-color: #dfd9d1 var(--content-color);
 }
 
+.book-card p {
+    flex-basis: 0px;
+    flex-grow: 1;
+    min-width: 100%;
+    letter-spacing: .2rem;
+}
+
+.book-title {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 2.8rem;
+    font-family: 'Bilbo Swash Caps', cursive;
+    color: var(--title-color);
+}
+
+.book-author, .book-pages {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: 'Kalam', cursive; 
+}
+
 
 /* Modal */
 .modal-container {
