@@ -61,18 +61,20 @@
     background-color: #e0dede;
 }
 
-
-
 /* Main Content */
 .main-container {
     min-height: 100vh;
     min-width: 100vw;
     background-color: var(--content-color);
-    display: grid;
-    gap: 10px;
-    padding: 20px;
+    padding: 40px;
+    z-index: 1;
 }
-
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+    gap: 40px;
+    min-width: 100%;
+}
 .book-card {
     background-color: var(--card-color);
     box-shadow: var(--box-shadow);
