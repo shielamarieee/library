@@ -150,7 +150,6 @@
     cursor: pointer;
 }
 
-
 /* Modal */
 .modal-container {
     opacity: 0;
@@ -167,12 +166,15 @@
     -moz-transition: .4s;
     -ms-transition: .4s;
     -o-transition: .4s;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* for the modal to be visible */
 .active {
     opacity: 1;
     z-index: 2;
+    pointer-events: all;
 }
 
 .add-book-form {
@@ -194,6 +196,8 @@
     -o-transform: translate(-50%);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+    user-select: none;
+    z-index: 0;
 }
 
 .add-book-form h1 {
@@ -259,11 +263,11 @@ input[type=text], input[type="number"] {
 }
 
 input:checked + .slider {
-    background-color: var(--header-color);
+    background-color: var(--button-color);
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px var(--header-color);
+    box-shadow: 0 0 1px var(--button-color);
 }
 
 input:checked + .slider:before {
@@ -282,7 +286,7 @@ input:checked + .slider:before {
 
 .button {
     padding: 10px;
-    background-color: var(--header-color);
+    background-color: var(--button-color);
     border: none;
     border-radius: 8px;
     font-size: 1.5rem;
