@@ -19,11 +19,22 @@ modalCloseBtn.addEventListener('click', () => {
 let myLibrary = [];
 
 //constructor
-function Book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
+// function Book(title, author, pages, status) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.status = status;
+// }
+
+//change object constructor to class
+
+class Book{
+    constructor(title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
 }
 
 // to push new Book object in the array
@@ -39,6 +50,7 @@ document.addEventListener('submit', (e) => {
     bookForm.reset();
     //hide modal
     modal.classList.remove('active');
+    console.log(book);
     console.log(myLibrary);
 })
 
